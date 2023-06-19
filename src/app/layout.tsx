@@ -1,8 +1,9 @@
+import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { Poppins } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 
-const poppins = Poppins({
-  weight: "400",
+const ubuntu = Ubuntu({
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
@@ -19,8 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>{children}</body>
-      <meta />
+      <body className={ubuntu.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
