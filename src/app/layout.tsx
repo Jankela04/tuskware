@@ -1,11 +1,6 @@
 import Navbar from "@/components/Navbar";
-import "./globals.css";
-import { Ubuntu } from "next/font/google";
-
-const ubuntu = Ubuntu({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+import "@/styles/globals.css";
+import { ubuntu } from "@/lib/fonts";
 
 export const metadata = {
   title: "TuskWare",
