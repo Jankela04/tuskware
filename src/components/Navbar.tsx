@@ -22,7 +22,7 @@ function Navbar() {
     };
   }, []);
   return (
-    <nav className="sticky top-0 w-full bg-black px-5 text-white">
+    <nav className="absolute top-0 z-50 w-full bg-black px-5 text-white">
       <div className="mx-auto flex max-w-7xl items-center justify-between py-4">
         <Link href="/" className="text-2xl font-bold">
           TuskWare
