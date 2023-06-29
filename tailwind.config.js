@@ -8,15 +8,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-100": "#FEEBCC",
-        "primary-200": "#FED099",
-        "primary-300": "#FCAF66",
-        "primary-400": "#FA8F40",
-        "primary-500": "#F75C03",
-        "primary-600": "#D44102",
-        "primary-700": "#B12C01",
-        "primary-800": "#8F1A00",
-        "primary-900": "#760E00",
+        primary: {
+          100: "#feebcc",
+          200: "#fed099",
+          300: "#fcaf66",
+          400: "#fa8f40",
+          500: "#f75c03",
+          600: "#d44102",
+          700: "#b12c01",
+          800: "#8f1a00",
+          900: "#760e00",
+        },
       },
     },
   },
