@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.content-container {
+  @apply mx-auto max-w-7xl px-4 md:px-6;
+}
+
 *,
 *::before,
 *::after {
