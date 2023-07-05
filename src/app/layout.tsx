@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
 import { ubuntu } from "@/lib/fonts";
+import TailwindScreenIndicator from "@/components/TWScreen";
 
 export const metadata = {
   title: "TuskWare",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body className={ubuntu.className}>
         <Navbar />
         {children}
+        <TailwindScreenIndicator />
       </body>
     </html>
   );
