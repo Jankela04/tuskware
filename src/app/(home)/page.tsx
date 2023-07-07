@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-neutral-700 text-white">
       <section className="relative h-screen w-full select-text">
         <div className="h-full w-full brightness-[0.25]">
           <Image
@@ -17,7 +17,7 @@ export default function Home() {
             src="/images/bg-mammoth-image.jpg"
           />
         </div>
-        <div className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 transform px-8 text-center text-white md:px-10">
+        <div className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 transform px-8 text-center md:px-10">
           <h1
             className={cn(poppins.className, "text-5xl font-bold xl:text-7xl")}
           >
@@ -30,7 +30,7 @@ export default function Home() {
           <Button className="mt-8">Shop Now</Button>
         </div>
       </section>
-      <section className="flex flex-col gap-24 bg-neutral-700 text-white">
+      <section className="flex flex-col gap-24">
         <div className="content-container pt-20 text-center">
           <h2
             className={cn(
@@ -73,6 +73,67 @@ export default function Home() {
               pet, and bond with these pets. Discover the joy of real-time
               coexistence and forge lasting connections that enrich your life.
             </p>
+          </div>
+        </div>
+      </section>
+      <section className="pt-10">
+        <h2
+          className={cn(
+            poppins.className,
+            "mb-10 px-8 text-center text-4xl font-bold text-primary-500 sm:text-5xl"
+          )}
+        >
+          Hear What Our Customers Say
+        </h2>
+        <div className="content-container flex flex-col gap-6 lg:flex-row">
+          <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 p-10 shadow-sm lg:w-1/3">
+            <Image
+              src="/images/jessica-barnes.jpg"
+              alt="Jessica Barnes"
+              width={75}
+              height={75}
+              className="rounded-full"
+            />
+            <span className="text-2xl">Jessica Barnes</span>
+            <blockquote className="text-center text-lg text-slate-300">
+              Bringing a mammoth into my life was the best decision ever!
+              They're surprisingly adorable, and playing with them is an
+              absolute delight. It's like having a giant, cuddly friend always
+              by my side. I can't imagine my life without my mammoth companion
+              now!
+            </blockquote>
+          </div>
+          <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 p-10 shadow-sm lg:w-1/3">
+            <Image
+              src="/images/ryan-mitchell.jpg"
+              alt="Ryan Mitchell"
+              width={75}
+              height={75}
+              className="rounded-full"
+            />
+            <span className="text-2xl">Alex Carter</span>
+            <blockquote className="text-center text-lg text-slate-300">
+              From the first moment I interacted with them, I knew they would
+              become an integral part of my everyday life. Playing with these
+              lovable creatures has brought an unparalleled sense of happiness.
+            </blockquote>
+          </div>
+          <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 p-10 shadow-sm lg:w-1/3">
+            <Image
+              src="/images/sophie-anderson.jpg"
+              alt="Sophie Anderson"
+              width={70}
+              height={70}
+              className="rounded-full"
+            />
+            <span className="text-2xl">Sophie Anderson</span>
+            <blockquote className="text-center text-lg text-slate-300">
+              I never though i needed mammoths. Their adorable nature and
+              playfulness are simply irresistible. Playing with my mammoth
+              companion brings me immense happiness and creates unforgettable
+              memories. It's amazing how such a unique pet can bring so much joy
+              into my life.
+            </blockquote>
           </div>
         </div>
       </section>
