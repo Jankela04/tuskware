@@ -85,8 +85,8 @@ export default function Home() {
         >
           Hear What Our Customers Say
         </h2>
-        <div className="content-container flex flex-col gap-6 lg:flex-row">
-          <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 p-10 shadow-sm lg:w-1/3">
+        <div className="content-container flex flex-col gap-6 pb-20 lg:flex-row">
+          <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 bg-neutral-800 p-10 shadow-xl shadow-neutral-900 lg:w-1/3">
             <Image
               src="/images/jessica-barnes.jpg"
               alt="Jessica Barnes"
@@ -103,7 +103,7 @@ export default function Home() {
               now!
             </blockquote>
           </div>
-          <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 p-10 shadow-sm lg:w-1/3">
+          <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 bg-neutral-800 p-10 shadow-xl shadow-neutral-900 lg:w-1/3">
             <Image
               src="/images/ryan-mitchell.jpg"
               alt="Ryan Mitchell"
@@ -118,7 +118,7 @@ export default function Home() {
               lovable creatures has brought an unparalleled sense of happiness.
             </blockquote>
           </div>
-          <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 p-10 shadow-sm lg:w-1/3">
+          <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 bg-neutral-800 p-10 shadow-xl shadow-neutral-900 lg:w-1/3">
             <Image
               src="/images/sophie-anderson.jpg"
               alt="Sophie Anderson"
