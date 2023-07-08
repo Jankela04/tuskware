@@ -1,3 +1,4 @@
+import { Provider as WrapBalancerProvider } from "react-wrap-balancer";
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
 import { ubuntu } from "@/lib/fonts";
@@ -17,9 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={ubuntu.className}>
-        <Navbar />
-        {children}
-        <TailwindScreenIndicator />
+        <WrapBalancerProvider>
+          <Navbar />
+          {children}
+          <TailwindScreenIndicator />
+        </WrapBalancerProvider>
       </body>
     </html>
   );

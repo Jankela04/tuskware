@@ -1,3 +1,4 @@
+import { Balancer } from "react-wrap-balancer";
 import Image from "next/image";
 import { poppins } from "@/lib/fonts";
 import Button from "@/components/ui/Button";
@@ -27,12 +28,19 @@ function HeroSection() {
         />
       </div>
       <div className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 transform px-8 text-center md:px-10">
-        <h1 className={cn(poppins.className, "text-5xl font-bold xl:text-7xl")}>
-          Journey Back to the Ice Age
+        <h1
+          className={cn(
+            poppins.className,
+            "text-5xl font-bold leading-tight sm:text-7xl"
+          )}
+        >
+          <Balancer>Journey Back to the Ice Age</Balancer>
         </h1>
-        <p className="m-auto mt-6 max-w-2xl text-2xl text-indigo-200 xl:text-3xl">
-          Bringing Mammoths to Your Doorstep. Shop Mammoths, Mammoth Tools, and
-          More.
+        <p className="m-auto mt-6 max-w-2xl text-2xl text-indigo-200 md:text-3xl">
+          <Balancer>
+            Bringing Mammoths to Your Doorstep. Shop Mammoths, Mammoth Tools,
+            and More.
+          </Balancer>
         </p>
         <Button className="mt-8">Shop Now</Button>
       </div>
@@ -42,7 +50,7 @@ function HeroSection() {
 
 function InfoSection() {
   return (
-    <section className="flex flex-col gap-24">
+    <section className="flex flex-col gap-12 md:gap-16">
       <div className="content-container pt-20 text-center">
         <h2
           className={cn(
@@ -50,18 +58,21 @@ function InfoSection() {
             "pb-10 text-4xl font-bold text-primary-500 lg:text-5xl"
           )}
         >
-          Mammoths for your everyday life
+          <Balancer>Mammoths for your everyday life</Balancer>
         </h2>
-        <p className="mx-auto max-w-3xl">
-          Discover the awe-inspiring world of mammoths and bring their
-          enchantment into your life. Our mammoth collection offers
-          extraordinary companionship and endless possibilities. From delightful
-          playtime to unforgettable adventures, our mammoths are here to ignite
-          your imagination and create lifelong memories. Explore our selection
-          today and experience the magic of owning a mammoth firsthand.
+        <p className="mx-auto">
+          <Balancer>
+            Discover the awe-inspiring world of mammoths and bring their
+            enchantment into your life. Our mammoth collection offers
+            extraordinary companionship and endless possibilities. From
+            delightful playtime to unforgettable adventures, our mammoths are
+            here to ignite your imagination and create lifelong memories.
+            Explore our selection today and experience the magic of owning a
+            mammoth firsthand.
+          </Balancer>
         </p>
       </div>
-      <div className="content-container flex flex-col items-center justify-center gap-4 text-center md:flex-row md:justify-between md:gap-10">
+      <div className="content-container flex flex-col items-center justify-center gap-4 text-center md:flex-row md:justify-between md:gap-8">
         <div>
           <Image
             src="/images/mammoth-transparent.png"
@@ -74,7 +85,7 @@ function InfoSection() {
           <h2
             className={cn(
               poppins.className,
-              "py-10 text-3xl font-bold text-primary-500 xl:text-4xl"
+              "pb-10 text-3xl font-bold text-primary-500 xl:text-4xl"
             )}
           >
             Discover Mammoth Connections
@@ -99,7 +110,7 @@ function TestimonialsSection() {
           "mb-10 px-8 text-center text-4xl font-bold text-primary-500 sm:text-5xl"
         )}
       >
-        Hear What Our Customers Say
+        <Balancer>Just See What Our Customers Say</Balancer>
       </h2>
       <div className="content-container flex flex-col gap-6 pb-20 lg:flex-row">
         <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 bg-neutral-800 p-10 shadow-xl shadow-neutral-900 lg:w-1/3">
