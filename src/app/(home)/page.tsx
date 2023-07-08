@@ -2,6 +2,7 @@ import { Balancer } from "react-wrap-balancer";
 import Image from "next/image";
 import { poppins } from "@/lib/fonts";
 import Button from "@/components/ui/Button";
+import * as Accordion from "@/components/ui/Accordion";
 import { cn } from "@/lib/utils";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <InfoSection />
       <TestimonialsSection />
+      <FAQSection />
     </main>
   );
 }
@@ -162,6 +164,66 @@ function TestimonialsSection() {
             joy into my life.
           </blockquote>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function FAQSection() {
+  const faqs = [
+    {
+      question: "Can I choose the age of the mammoth I adopt?",
+      answer:
+        "No, although the preview pictures may depict fully grown mammoths, please note that when you purchase our mammoths, you will receive a very young one, typically no older than one month.\n \n We intentionally provide young mammoths for sale as we believe that bonding and fostering a strong connection with their owners is most effectively achieved during their early stages of life. This gives you the unique opportunity to raise, nurture, and witness the growth of your mammoth from its earliest moments.",
+    },
+    {
+      question: "Can I purchase a mammoth if I am located outside of Europe?",
+      answer:
+        "Currently, we only offer mammoths for customers within Europe. We do not provide international shipping services.",
+    },
+    {
+      question: "Can mammoths be kept as indoor pets?",
+      answer:
+        "Yes, during their first year, mammoths can be kept indoors. They grow rapidly during this stage, so it is recommended to gradually transition them to outdoor living before their first year. Providing a safe and comfortable environment both indoors and outdoors is essential for their well-being.",
+    },
+    {
+      question: "Can I ride my mammoth?",
+      answer:
+        "Yes, once your mammoth reaches around 4 years of age, they will be suitable for riding. As they grow older and stronger, riding becomes a possibility. Remember to train your mammoth appropriately and use proper riding gear to ensure both your safety and the well-being of your mammoth.",
+    },
+    {
+      question: "Can I train my mammoth to perform specific tasks?",
+      answer:
+        "Absolutely! You have the flexibility to train your mammoth according to your preferences. Whether you want them to sit, stand, carry objects, travel with you, be more friendly towards strangers, or even act as a house guard, mammoths are intelligent creatures that can be trained to adapt to various commands and behaviors.",
+    },
+  ];
+
+  return (
+    <section className="pt-10">
+      <div className="content-container pb-20">
+        <h2
+          className={cn(
+            poppins.className,
+            "mb-10 text-center text-5xl font-bold text-primary-500"
+          )}
+        >
+          Frequently Asked Questions
+        </h2>
+        <Accordion.Root
+          type="multiple"
+          className="mx-auto max-w-3xl border-red-500 pb-10 text-lg"
+        >
+          {faqs.map((faq, idx) => {
+            return (
+              <Accordion.Item value={`faq-${idx + 1}`}>
+                <Accordion.Trigger>{faq.question}</Accordion.Trigger>
+                <Accordion.Content className="text-slate-300">
+                  <p className="whitespace-pre-line">{faq.answer}</p>
+                </Accordion.Content>
+              </Accordion.Item>
+            );
+          })}
+        </Accordion.Root>
       </div>
     </section>
   );
