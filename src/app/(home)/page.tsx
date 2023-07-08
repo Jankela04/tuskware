@@ -123,10 +123,11 @@ function TestimonialsSection() {
           />
           <span className="text-2xl">Jessica Barnes</span>
           <blockquote className="text-center text-lg text-slate-300">
-            Bringing a mammoth into my life was the best decision ever! They're
-            surprisingly adorable, and playing with them is an absolute delight.
-            It's like having a giant, cuddly friend always by my side. I can't
-            imagine my life without my mammoth companion now!
+            Bringing a mammoth into my life was the best decision ever!
+            They&apos;re surprisingly adorable, and playing with them is an
+            absolute delight. It&apos;s like having a giant, cuddly friend
+            always by my side. I can&apos;t imagine my life without my mammoth
+            companion now!
           </blockquote>
         </div>
         <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 bg-neutral-800 p-10 shadow-xl shadow-neutral-900 lg:w-1/3">
@@ -157,8 +158,8 @@ function TestimonialsSection() {
             I never though i needed mammoths. Their adorable nature and
             playfulness are simply irresistible. Playing with my mammoth
             companion brings me immense happiness and creates unforgettable
-            memories. It's amazing how such a unique pet can bring so much joy
-            into my life.
+            memories. It&apos;s amazing how such a unique pet can bring so much
+            joy into my life.
           </blockquote>
         </div>
       </div>
