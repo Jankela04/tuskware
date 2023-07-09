@@ -199,32 +199,30 @@ function FAQSection() {
   ];
 
   return (
-    <section className="pt-10">
-      <div className="content-container pb-20">
-        <h2
-          className={cn(
-            poppins.className,
-            "mb-10 text-center text-5xl font-bold text-primary-500"
-          )}
-        >
-          Frequently Asked Questions
-        </h2>
-        <Accordion.Root
-          type="multiple"
-          className="mx-auto max-w-3xl border-red-500 pb-10 text-lg"
-        >
-          {faqs.map((faq, idx) => {
-            return (
-              <Accordion.Item value={`faq-${idx + 1}`}>
-                <Accordion.Trigger>{faq.question}</Accordion.Trigger>
-                <Accordion.Content className="text-slate-300">
-                  <p className="whitespace-pre-line">{faq.answer}</p>
-                </Accordion.Content>
-              </Accordion.Item>
-            );
-          })}
-        </Accordion.Root>
-      </div>
+    <section className="content-container">
+      <h2
+        className={cn(
+          poppins.className,
+          "mb-10 text-center text-4xl font-bold text-primary-500 md:text-5xl"
+        )}
+      >
+        Frequently Asked Questions
+      </h2>
+      <Accordion.Root
+        type="multiple"
+        className="mx-auto max-w-3xl border-red-500 pb-10 text-lg"
+      >
+        {faqs.map((faq, idx) => {
+          return (
+            <Accordion.Item value={`faq-${idx + 1}`} key={idx}>
+              <Accordion.Trigger>{faq.question}</Accordion.Trigger>
+              <Accordion.Content className="text-slate-300">
+                <p className="whitespace-pre-line">{faq.answer}</p>
+              </Accordion.Content>
+            </Accordion.Item>
+          );
+        })}
+      </Accordion.Root>
     </section>
   );
 }
