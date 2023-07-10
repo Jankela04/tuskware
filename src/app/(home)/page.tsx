@@ -12,6 +12,7 @@ export default function Home() {
       <InfoSection />
       <TestimonialsSection />
       <FAQSection />
+      <CTASection />
     </main>
   );
 }
@@ -223,6 +224,24 @@ function FAQSection() {
           );
         })}
       </Accordion.Root>
+    </section>
+  );
+}
+
+function CTASection() {
+  return (
+    <section className="content-container mt-10 pb-20">
+      <h2
+        className={cn(
+          poppins.className,
+          "mb-20 text-center text-4xl font-bold text-primary-500 sm:text-5xl"
+        )}
+      >
+        Are you ready?
+      </h2>
+      <div className="flex justify-center">
+        <Button>Shop Now</Button>
+      </div>
     </section>
   );
 }
