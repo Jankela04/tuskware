@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
-    <main className="bg-neutral-700 text-white">
+    <main className="space-y-20 bg-neutral-700 text-white">
       <HeroSection />
       <InfoSection />
       <TestimonialsSection />
@@ -54,7 +54,7 @@ function HeroSection() {
 function InfoSection() {
   return (
     <section className="flex flex-col gap-12 md:gap-16">
-      <div className="content-container pt-20 text-center">
+      <div className="content-container text-center">
         <h2
           className={cn(
             poppins.className,
@@ -106,7 +106,7 @@ function InfoSection() {
 
 function TestimonialsSection() {
   return (
-    <section className="pt-10">
+    <section>
       <h2
         className={cn(
           poppins.className,
@@ -115,7 +115,7 @@ function TestimonialsSection() {
       >
         <Balancer>Just See What Our Customers Say</Balancer>
       </h2>
-      <div className="content-container flex flex-col gap-6 pb-20 lg:flex-row">
+      <div className="content-container flex flex-col gap-6 lg:flex-row">
         <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 bg-neutral-800 p-10 shadow-xl shadow-neutral-900 lg:w-1/3">
           <Image
             src="/images/jessica-barnes.jpg"
@@ -211,7 +211,7 @@ function FAQSection() {
       </h2>
       <Accordion.Root
         type="multiple"
-        className="mx-auto max-w-3xl border-red-500 pb-10 text-lg"
+        className="mx-auto max-w-3xl border-red-500 text-lg"
       >
         {faqs.map((faq, idx) => {
           return (
@@ -230,7 +230,7 @@ function FAQSection() {
 
 function CTASection() {
   return (
-    <section className="content-container mt-10 pb-20">
+    <section className="content-container pb-20">
       <h2
         className={cn(
           poppins.className,
