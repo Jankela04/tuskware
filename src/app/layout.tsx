@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
 import { ubuntu } from "@/lib/fonts";
 import TailwindScreenIndicator from "@/components/TWScreen";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "TuskWare",
@@ -21,6 +22,7 @@ export default function RootLayout({
         <WrapBalancerProvider>
           <Navbar />
           {children}
+          <Footer />
           <TailwindScreenIndicator />
         </WrapBalancerProvider>
       </body>
