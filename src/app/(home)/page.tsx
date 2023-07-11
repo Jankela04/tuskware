@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
-    <main className="space-y-20 bg-neutral-700 text-white">
+    <main className="space-y-20">
       <HeroSection />
       <InfoSection />
       <TestimonialsSection />

@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="body-font bg-gray-900 text-gray-400">
+    <footer className="body-font bg-stone-900 text-gray-400">
       <div className="container mx-auto flex flex-col items-center px-5 py-8 sm:flex-row">
         <a className="title-font flex items-center justify-center font-medium text-white md:justify-start">
           <span className="ml-3 text-xl">Tuskware</span>
