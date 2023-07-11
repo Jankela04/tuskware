@@ -1,7 +1,7 @@
+import Link from "next/link";
 import { Balancer } from "react-wrap-balancer";
 import Image from "next/image";
 import { poppins } from "@/lib/fonts";
-import Button from "@/components/ui/Button";
 import * as Accordion from "@/components/ui/Accordion";
 import { cn } from "@/lib/utils";
 
@@ -19,7 +19,7 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <section className="relative h-screen w-full select-text">
+    <section className="relative h-[95vh] w-full select-text">
       <div className="h-full w-full brightness-[0.25]">
         <Image
           priority
@@ -45,7 +45,7 @@ function HeroSection() {
             and More.
           </Balancer>
         </p>
-        <Button className="mt-8">Shop Now</Button>
+        <CTAButton />
       </div>
     </section>
   );
@@ -240,8 +240,23 @@ function CTASection() {
         Are you ready?
       </h2>
       <div className="flex justify-center">
-        <Button>Shop Now</Button>
+        <CTAButton />
       </div>
     </section>
+  );
+}
+
+function CTAButton() {
+  return (
+    <Link
+      href="/shop"
+      className={cn(
+        "mt-8",
+        "align-center inline-flex justify-center rounded-lg px-4 py-2 text-lg",
+        "bg-primary-500 font-bold hover:bg-primary-600"
+      )}
+    >
+      Shop Now
+    </Link>
   );
 }

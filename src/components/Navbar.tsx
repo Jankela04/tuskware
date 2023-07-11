@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import Button from "./ui/Button";
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ function Navbar() {
     };
   }, []);
   return (
-    <nav className="absolute top-0 z-50 w-full bg-black text-white">
+    <nav className="w-full bg-black text-white">
       <div className="content-container flex items-center justify-between py-4">
         <Link href="/" className="text-2xl font-bold">
           TuskWare
@@ -33,7 +33,7 @@ function Navbar() {
         <div
           className={`left-0 bg-black md:flex md:items-center md:gap-4 ${
             isMobileMenuOpen
-              ? "absolute top-16 flex w-full flex-col items-end justify-between gap-5 p-5"
+              ? "absolute top-16 z-50 flex w-full flex-col items-end justify-between gap-5 p-5"
               : "hidden"
           }`}
         >
@@ -52,7 +52,15 @@ const NavLinks = () => {
       >
         Login
       </Link>
-      <Button>Shop Now</Button>
+      <Link
+        href="/shop"
+        className={cn(
+          "align-center inline-flex justify-center rounded-lg px-4 py-2 text-lg",
+          "bg-primary-500 font-bold hover:bg-primary-600"
+        )}
+      >
+        Shop Now
+      </Link>
     </>
   );
 };
