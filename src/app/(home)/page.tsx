@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { Balancer } from "react-wrap-balancer";
 import Image from "next/image";
 import { poppins } from "@/lib/fonts";
 import * as Accordion from "@/components/ui/Accordion";
 import { cn } from "@/lib/utils";
+import Button from "@/components/ui/Button";
 
 export default function Home() {
   return (
@@ -248,15 +248,8 @@ function CTASection() {
 
 function CTAButton() {
   return (
-    <Link
-      href="/shop"
-      className={cn(
-        "mt-8",
-        "align-center inline-flex justify-center rounded-lg px-4 py-2 text-lg",
-        "bg-primary-500 font-bold hover:bg-primary-600"
-      )}
-    >
+    <Button comp="link" variant="primary" href="/shop" className="mt-8">
       Shop Now
-    </Link>
+    </Button>
   );
 }

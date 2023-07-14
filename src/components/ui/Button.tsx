@@ -1,16 +1,18 @@
 "use client";
+import Link, { LinkProps as NextLinkProps } from "next/link";
 import { cn } from "@/lib/utils";
 import { cva, VariantProps } from "class-variance-authority";
-import { ButtonHTMLAttributes, forwardRef } from "react";
+import { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 
 const buttonVariants = cva(
-  "inline-flex align-center justify-center py-2 px-4 rounded-lg text-lg focus:ring-2 ring-blue-500",
+  "inline-flex align-center justify-center py-2 px-4 rounded-lg text-lg focus-visible:ring-2 ring-blue-500",
   {
     variants: {
       variant: {
         primary: "bg-primary-500 font-bold hover:bg-primary-600",
         outline:
           "border border-white bg-background hover:bg-gray-800/50 border-input",
+        link: "text-slate-300 hover:underline underline-offset-2 hover:text-white",
       },
     },
     defaultVariants: {
@@ -19,21 +21,30 @@ const buttonVariants = cva(
   }
 );
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
-  VariantProps<typeof buttonVariants>;
+type LinkProps = NextLinkProps &
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href">;
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, ...props }, ref) => {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+
+type Props = VariantProps<typeof buttonVariants> &
+  (({ comp: "button" } & ButtonProps) | ({ comp: "link" } & LinkProps));
+
+const Button = ({ comp = "button", variant, className, ...props }: Props) => {
+  if (comp === "link") {
     return (
-      <button
-        {...props}
+      <Link
+        {...(props as LinkProps)}
         className={cn(buttonVariants({ variant, className }))}
-        ref={ref}
       />
     );
   }
-);
 
-Button.displayName = "Button";
+  return (
+    <button
+      {...(props as ButtonProps)}
+      className={cn(buttonVariants({ variant, className }))}
+    />
+  );
+};
 
 export default Button;

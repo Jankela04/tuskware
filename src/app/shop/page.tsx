@@ -30,8 +30,10 @@ function ShopPage() {
             <div className="flex flex-col items-center gap-5 lg:items-start">
               <span>$299.99</span>
               <div className="flex gap-5">
-                <Button>Add to cart</Button>
-                <Button variant="outline">View Details</Button>
+                <Button comp="button">Add to cart</Button>
+                <Button comp="button" variant="outline">
+                  View Details
+                </Button>
               </div>
             </div>
           </div>

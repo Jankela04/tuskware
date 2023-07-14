@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
+import Button from "./ui/Button";
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -46,21 +46,12 @@ function Navbar() {
 const NavLinks = () => {
   return (
     <>
-      <Link
-        href="/auth/login"
-        className="text-xl text-slate-300 hover:text-white"
-      >
+      <Button comp="link" variant="link" href="/auth/login">
         Login
-      </Link>
-      <Link
-        href="/shop"
-        className={cn(
-          "align-center inline-flex justify-center rounded-lg px-4 py-2 text-lg",
-          "bg-primary-500 font-bold hover:bg-primary-600"
-        )}
-      >
+      </Button>
+      <Button comp="link" variant="primary" href="/shop">
         Shop Now
-      </Link>
+      </Button>
     </>
   );
 };
