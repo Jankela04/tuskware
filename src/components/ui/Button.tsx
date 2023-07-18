@@ -9,9 +9,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-primary-500 font-bold hover:bg-primary-600",
-        outline:
-          "border border-white bg-background hover:bg-gray-800/50 border-input",
+        primary: "bg-primary font-bold hover:bg-primary-600",
+        outline: "border border-white bg-background hover:bg-foreground/5",
         link: "text-slate-300 hover:underline underline-offset-2 hover:text-white",
       },
     },

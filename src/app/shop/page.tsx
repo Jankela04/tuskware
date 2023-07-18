@@ -4,7 +4,7 @@ import Image from "next/image";
 function ShopPage() {
   return (
     <main>
-      <section className="bg-stone-900 pt-8">
+      <section className="bg-secondary py-8">
         <div className="mx-auto max-w-4xl px-4 lg:flex lg:gap-8">
           <Image
             alt="Classic Mammoth"
@@ -15,7 +15,7 @@ function ShopPage() {
           />
           <div className="flex flex-col items-center gap-4 lg:items-start lg:justify-between">
             <div>
-              <h2 className="text-3xl font-bold text-primary-500">
+              <h2 className="text-3xl font-bold text-primary">
                 Classic Mammoth
               </h2>
               <span className="mt-2 inline-block">The one you need</span>

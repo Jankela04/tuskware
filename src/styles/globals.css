@@ -2,12 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.content-container {
-  @apply mx-auto max-w-7xl px-4 md:px-6;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-body {
-  @apply bg-stone-800 text-white;
+@layer utilities {
+  .content-container {
+    @apply mx-auto max-w-7xl px-4 md:px-6;
+  }
 }
 
 *,

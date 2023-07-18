@@ -58,7 +58,7 @@ function InfoSection() {
         <h2
           className={cn(
             poppins.className,
-            "pb-10 text-4xl font-bold text-primary-500 lg:text-5xl"
+            "pb-10 text-4xl font-bold text-primary lg:text-5xl"
           )}
         >
           <Balancer>Mammoths for your everyday life</Balancer>
@@ -88,7 +88,7 @@ function InfoSection() {
           <h2
             className={cn(
               poppins.className,
-              "pb-10 text-3xl font-bold text-primary-500 xl:text-4xl"
+              "pb-10 text-3xl font-bold text-primary xl:text-4xl"
             )}
           >
             Discover Mammoth Connections
@@ -110,13 +110,13 @@ function TestimonialsSection() {
       <h2
         className={cn(
           poppins.className,
-          "mb-10 px-8 text-center text-4xl font-bold text-primary-500 sm:text-5xl"
+          "mb-10 px-8 text-center text-4xl font-bold text-primary sm:text-5xl"
         )}
       >
         <Balancer>Just See What Our Customers Say</Balancer>
       </h2>
       <div className="content-container flex flex-col gap-6 lg:flex-row">
-        <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 bg-neutral-800 p-10 shadow-xl shadow-neutral-900 lg:w-1/3">
+        <div className="flex flex-col items-center gap-6 rounded-lg border-2 bg-secondary p-10 shadow-xl shadow-neutral-900 lg:w-1/3">
           <Image
             src="/images/jessica-barnes.jpg"
             alt="Jessica Barnes"
@@ -133,7 +133,7 @@ function TestimonialsSection() {
             companion now!
           </blockquote>
         </div>
-        <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 bg-neutral-800 p-10 shadow-xl shadow-neutral-900 lg:w-1/3">
+        <div className="flex flex-col items-center gap-6 rounded-lg border-2 bg-secondary p-10 shadow-xl shadow-neutral-900 lg:w-1/3">
           <Image
             src="/images/ryan-mitchell.jpg"
             alt="Ryan Mitchell"
@@ -148,7 +148,7 @@ function TestimonialsSection() {
             lovable creatures has brought an unparalleled sense of happiness.
           </blockquote>
         </div>
-        <div className="flex flex-col items-center gap-6 rounded-lg border-2 border-slate-300 bg-neutral-800 p-10 shadow-xl shadow-neutral-900 lg:w-1/3">
+        <div className="flex flex-col items-center gap-6 rounded-lg border-2 bg-secondary p-10 shadow-xl shadow-neutral-900 lg:w-1/3">
           <Image
             src="/images/sophie-anderson.jpg"
             alt="Sophie Anderson"
@@ -204,7 +204,7 @@ function FAQSection() {
       <h2
         className={cn(
           poppins.className,
-          "mb-10 text-center text-4xl font-bold text-primary-500 md:text-5xl"
+          "mb-10 text-center text-4xl font-bold text-primary md:text-5xl"
         )}
       >
         Frequently Asked Questions
@@ -234,7 +234,7 @@ function CTASection() {
       <h2
         className={cn(
           poppins.className,
-          "mb-20 text-center text-4xl font-bold text-primary-500 sm:text-5xl"
+          "mb-20 text-center text-4xl font-bold text-primary sm:text-5xl"
         )}
       >
         Are you ready?
