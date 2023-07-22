@@ -22,7 +22,7 @@ function ShopPage() {
             </div>
             <Image
               alt="Classic Mammoth"
-              src="/images/classic-mammoth.png"
+              src="/images/products/mammoth/classic-mammoth-preview.png"
               width={354}
               height={249}
               className="block lg:hidden"
