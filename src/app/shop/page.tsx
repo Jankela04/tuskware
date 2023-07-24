@@ -1,45 +1,57 @@
 import Button from "@/components/ui/Button";
 import Image from "next/image";
+import mammoths from "@/data/products/mammoths.json";
+import { Mammoth } from "@/types/products";
 
-function ShopPage() {
+async function ShopPage() {
+  const [classic, snow] = mammoths;
+  console.log(classic, snow);
   return (
-    <main>
-      <section className="bg-secondary py-8">
-        <div className="mx-auto max-w-4xl px-4 lg:flex lg:gap-8">
+    <main className="space-y-4">
+      <MammothProduct mammoth={classic} />
+      <MammothProduct mammoth={snow} />
+    </main>
+  );
+}
+
+type MammothProductProps = {
+  mammoth: Mammoth;
+};
+function MammothProduct({ mammoth }: MammothProductProps) {
+  return (
+    <section className="py-8">
+      <div className="mx-auto max-w-4xl px-4 md:flex md:gap-8">
+        <Image
+          alt="Classic Mammoth"
+          src={mammoth.preview_image}
+          width={379}
+          height={379}
+          className="hidden md:block"
+        />
+        <div className="flex flex-col items-center gap-4 md:items-start md:justify-between">
+          <div>
+            <h2 className="text-3xl font-bold text-primary">{mammoth.name}</h2>
+            <span className="mt-2 inline-block">{mammoth.tagline}</span>
+          </div>
           <Image
             alt="Classic Mammoth"
-            src="/images/classic-mammoth.png"
-            width={379}
-            height={379}
-            className="hidden lg:block"
+            src={mammoth.preview_image}
+            width={354}
+            height={249}
+            className="block md:hidden"
           />
-          <div className="flex flex-col items-center gap-4 lg:items-start lg:justify-between">
-            <div>
-              <h2 className="text-3xl font-bold text-primary">
-                Classic Mammoth
-              </h2>
-              <span className="mt-2 inline-block">The one you need</span>
-            </div>
-            <Image
-              alt="Classic Mammoth"
-              src="/images/products/mammoth/classic-mammoth-preview.png"
-              width={354}
-              height={249}
-              className="block lg:hidden"
-            />
-            <div className="flex flex-col items-center gap-5 lg:items-start">
-              <span>$299.99</span>
-              <div className="flex gap-5">
-                <Button comp="button">Add to cart</Button>
-                <Button comp="button" variant="outline">
-                  View Details
-                </Button>
-              </div>
+          <div className="flex flex-col items-center gap-5 md:items-start">
+            <span>{`${mammoth.price}`}</span>
+            <div className="flex gap-5">
+              <Button comp="button">Add to cart</Button>
+              <Button comp="button" variant="outline">
+                View Details
+              </Button>
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }
 
