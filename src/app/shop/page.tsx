@@ -3,13 +3,12 @@ import Image from "next/image";
 import mammoths from "@/data/products/mammoths.json";
 import { Mammoth } from "@/types/products";
 
-async function ShopPage() {
-  const [classic, snow] = mammoths;
-  console.log(classic, snow);
+function ShopPage() {
   return (
     <main className="space-y-4">
-      <MammothProduct mammoth={classic} />
-      <MammothProduct mammoth={snow} />
+      {mammoths.map((mammoth) => (
+        <MammothProduct mammoth={mammoth} />
+      ))}
     </main>
   );
 }
