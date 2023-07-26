@@ -33,9 +33,15 @@ function Navbar() {
         </Link>
         <button className="block md:hidden" onClick={toggleMenu}>
           {!isMobileMenuOpen ? (
-            <HamburgerMenuIcon className="h-8 w-8" />
+            <>
+              <HamburgerMenuIcon className="h-8 w-8" />
+              <span className="sr-only">Open navigation menu</span>
+            </>
           ) : (
-            <CrossIcon className="h-8 w-8" />
+            <>
+              <CrossIcon className="h-8 w-8" />
+              <span className="sr-only">Close navigation menu</span>
+            </>
           )}
         </button>
         <div
