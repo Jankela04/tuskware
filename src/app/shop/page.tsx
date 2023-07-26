@@ -7,7 +7,7 @@ function ShopPage() {
   return (
     <main className="space-y-4">
       {mammoths.map((mammoth) => (
-        <MammothProduct mammoth={mammoth} />
+        <MammothProduct mammoth={mammoth} key={mammoth.id} />
       ))}
     </main>
   );
