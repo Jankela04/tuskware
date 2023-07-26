@@ -7,11 +7,11 @@ function Footer() {
         <a className="title-font flex items-center justify-center font-medium text-white md:justify-start">
           <span className="ml-3 text-xl">Tuskware</span>
         </a>
-        <p className="mt-4 text-sm text-gray-400 sm:ml-4 sm:mt-0 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:pl-4">
+        <p className="mt-4 text-sm text-gray-400 sm:ml-4 sm:mt-0 sm:border-l-2 sm:py-2 sm:pl-4">
           built by
           <a
             href="https://github.com/jankela04"
-            className="ml-1 text-gray-500 hover:underline"
+            className="ml-1 text-primary hover:underline"
             target="_blank"
             rel="noopener noreferrer"
           >
