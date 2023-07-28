@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "product": "mammoth",
     "name": "Classic Mammoth",
     "tagline": "The One you need",
     "description": "The Classic Mammoth is a loyal and sturdy companion, exuding strength and grace. This timeless marvel is perfect for diverse landscapes and adventures. From exploring vast terrains to creating cherished memories, the Classic Mammoth will be your trusted companion for a lifetime.",
@@ -13,6 +14,7 @@
   },
   {
     "id": 2,
+    "product": "mammoth",
     "name": "Snow Mammoth",
     "tagline": "For the snowy adventures",
     "description": "The Snow Mammoth is specifically adapted for thrilling snowy escapades. With its thick, woolly coat and surefooted nature, it excels in conquering icy terrains. Experience the thrill of snowy expeditions like never before with the Snow Mammoth as your trusted guide.",
@@ -22,5 +24,13 @@
       "/images/products/mammoth/snow-mammoth-1.jpg",
       "/images/products/mammoth/snow-mammoth-2.jpg"
     ]
+  },
+  {
+    "id": 3,
+    "product": "accessory",
+    "name": "Mammoth Taming Guidebook",
+    "price": 19.99,
+    "description": "Unlock the secrets of successful mammoth taming with this comprehensive guidebook. Learn effective techniques, tips, and best practices for building a strong bond and nurturing a happy and well-behaved mammoth companion. Whether you're a first-time mammoth owner or an experienced enthusiast, this guidebook is an essential resource for a harmonious relationship with your gentle giant.",
+    "images": []
   }
 ]
