@@ -2,6 +2,7 @@ import Button from "@/components/ui/Button";
 import Image from "next/image";
 import products from "@/data/products.json";
 import { Mammoth } from "@/types/products";
+import { generateProductSlug } from "@/lib/utils";
 
 const getMammoths = () =>
   products.filter((product) => product.product === "mammoth") as Mammoth[];
@@ -25,7 +26,7 @@ function MammothProduct({ mammoth }: MammothProductProps) {
     <section className="py-8">
       <div className="mx-auto max-w-4xl px-4 md:flex md:gap-8">
         <Image
-          alt="Classic Mammoth"
+          alt={`Image of ${mammoth.name}`}
           src={mammoth.preview_image}
           width={379}
           height={379}
@@ -37,7 +38,7 @@ function MammothProduct({ mammoth }: MammothProductProps) {
             <span className="mt-2 inline-block">{mammoth.tagline}</span>
           </div>
           <Image
-            alt="Classic Mammoth"
+            alt={`Image of ${mammoth.name}`}
             src={mammoth.preview_image}
             width={354}
             height={249}
@@ -47,7 +48,11 @@ function MammothProduct({ mammoth }: MammothProductProps) {
             <span>{`${mammoth.price}`}</span>
             <div className="flex gap-5">
               <Button comp="button">Add to cart</Button>
-              <Button comp="button" variant="outline">
+              <Button
+                comp="link"
+                href={`/product/${generateProductSlug(mammoth.name)}`}
+                variant="outline"
+              >
                 View Details
               </Button>
             </div>
