@@ -2,10 +2,12 @@ import Button from "@/components/ui/Button";
 import Image from "next/image";
 import products from "@/data/products.json";
 import { Mammoth } from "@/types/products";
-import { generateProductSlug } from "@/lib/utils";
+import { convertToSlug } from "@/lib/utils";
 
 const getMammoths = () =>
   products.filter((product) => product.product === "mammoth") as Mammoth[];
+
+const generateLink = (name: string) => `/product/${convertToSlug(name)}`;
 
 function ShopPage() {
   const mammoths = getMammoths();
@@ -50,7 +52,7 @@ function MammothProduct({ mammoth }: MammothProductProps) {
               <Button comp="button">Add to cart</Button>
               <Button
                 comp="link"
-                href={`/product/${generateProductSlug(mammoth.name)}`}
+                href={generateLink(mammoth.name)}
                 variant="outline"
               >
                 View Details
