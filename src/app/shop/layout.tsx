@@ -7,26 +7,32 @@ type ShopLayoutProps = {
   children: React.ReactNode;
 };
 
-const filters = [
-  { filter: "Mammoths", href: "/shop/mammoths" },
-  { filter: "Accessories", href: "/shop/accessories" },
-];
-
 function ShopLayout({ children }: ShopLayoutProps) {
   const pathname = usePathname();
   return (
     <>
       <div className="flex items-center justify-center gap-4 p-4">
-        {filters.map((filter) => (
-          <Button
-            comp="link"
-            href={filter.href}
-            variant={pathname.startsWith(filter.href) ? "primary" : "secondary"}
-            key={filter.href}
-          >
-            {filter.filter}
-          </Button>
-        ))}
+        <Button
+          comp="link"
+          href="/shop/mammoths"
+          variant={
+            pathname.startsWith("/shop/mammoths") ||
+            pathname.startsWith("/shop")
+              ? "primary"
+              : "secondary"
+          }
+        >
+          Mammoths
+        </Button>
+        <Button
+          comp="link"
+          href="/shop/accessories"
+          variant={
+            pathname.startsWith("/shop/accessories") ? "primary" : "secondary"
+          }
+        >
+          Accessories
+        </Button>
       </div>
       {children}
     </>

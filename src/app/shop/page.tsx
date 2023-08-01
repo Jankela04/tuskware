@@ -1,7 +1,7 @@
-import { redirect } from "next/navigation";
+import MammothProducts from "./mammoths/page";
 
 function Shop() {
-  redirect("/shop/mammoths");
+  return <MammothProducts />;
 }
 
 export default Shop;
