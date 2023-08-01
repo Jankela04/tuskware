@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import ProductFilter from "./ProductFilter";
+
+export const metadata: Metadata = {
+  title: "Shop",
+  description: "Shop Mammoths and Mammoth accessories",
+};
 
 type ShopLayoutProps = {
   children: React.ReactNode;

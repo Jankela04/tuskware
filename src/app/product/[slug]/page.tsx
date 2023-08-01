@@ -11,8 +11,17 @@ type ProductPageProps = {
     slug: string;
   };
 };
+
 function getProductFromSlug(slug: string) {
   return products.find((product) => convertToSlug(product.name) === slug);
+}
+
+export async function generateMetadata({ params: { slug } }: ProductPageProps) {
+  const product = getProductFromSlug(slug);
+  return {
+    title: product?.name,
+    description: `Buy ${product?.name}. ${product?.description}`,
+  };
 }
 
 function ProductPage({ params: { slug } }: ProductPageProps) {
